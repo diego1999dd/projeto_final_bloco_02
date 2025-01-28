@@ -22,77 +22,108 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# 🏥 E-Commerce da Farmácia do bem 💊
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📌 Descrição
+Este projeto é um sistema de e-commerce para uma farmácia, desenvolvido utilizando o framework **NestJS** no **Visual Studio Code**. Ele segue a estrutura modular do **NestJS**, e implementa funcionalidades essenciais para a gestão de produtos, categorias, usuários e autenticação.
 
-## Project setup
+## 🛠️ Tecnologias Utilizadas
+- **Node.js**
+- **NestJS**
+- **TypeScript**
+- **TypeORM**
+- **Banco de Dados Relacional** (Ex: PostgreSQL, MySQL)
+- **JWT (JSON Web Token)** para Autenticação
+- **BCrypt** para Hash de Senhas
 
-```bash
-$ npm install
+## 📂 Estrutura do Projeto
+```
+src/
+|-- auth/                # Módulo de Autenticação
+|   |-- bcrypt/
+|   |-- constants/
+|   |-- controllers/
+|   |-- entities/
+|   |-- guard/
+|   |-- services/
+|   |-- strategy/
+|   |-- auth.module.ts
+|
+|-- categoria/           # Módulo de Categorias de Produtos
+|   |-- controllers/
+|   |-- entities/
+|   |-- services/
+|   |-- categoria.module.ts
+|
+|-- produto/             # Módulo de Produtos
+|   |-- controllers/
+|   |-- entities/
+|   |-- services/
+|   |-- produto.module.ts
+|
+|-- usuario/             # Módulo de Usuários
+|   |-- controllers/
+|   |-- entities/
+|   |-- services/
+|   |-- usuario.module.ts
+|
+|-- util/                # Funções Utilitárias
+|   |-- numerictransformer.ts
+|
+|-- app.controller.ts    # Controlador Principal
+|-- app.module.ts        # Módulo Principal
+|-- app.service.ts       # Serviço Principal
+|-- main.ts              # Arquivo de Inicialização
 ```
 
-## Compile and run the project
+## 🚀 Funcionalidades
+- **🔐 Autenticação de Usuários**
+  - Registro e login utilizando **JWT** e **BCrypt**
+- **🛍️ Gestão de Produtos**
+  - CRUD de produtos com informações como nome, descrição, preço e categoria
+- **📦 Gestão de Categorias**
+  - Cadastro e organização de produtos por categorias
+- **👤 Gestão de Usuários**
+  - Cadastro de clientes e controle de acessos
+- **🔒 Validação e Segurança**
+  - Proteção de rotas com Guards e Strategy JWT
 
-```bash
-# development
-$ npm run start
+## ▶️ Como Executar o Projeto
+1. **Clonar o repositório:**
+   ```bash
+   git clone <URL-DO-REPOSITORIO>
+   ```
+2. **Instalar dependências:**
+   ```bash
+   npm install
+   ```
+3. **Configurar o banco de dados**
+   - Criar um arquivo `.env` com as credenciais do banco de dados
+   ```env
+   DATABASE_URL=<URL_DO_BANCO>
+   JWT_SECRET=<SEGREDO_JWT>
+   ```
+4. **Rodar as migrações**
+   ```bash
+   npm run migration:run
+   ```
+5. **Iniciar o servidor:**
+   ```bash
+   npm run start
+   ```
 
-# watch mode
-$ npm run start:dev
+## ⏳ Prazo de Entrega
+O sistema foi projetado para ser desenvolvido em **4h30 minutos**, abordando os requisitos solicitados.
 
-# production mode
-$ npm run start:prod
-```
+## 📞 Contato
+Caso tenha dúvidas ou precise de suporte, entre em contato.
 
-## Run tests
+---
+Desenvolvido com **NestJS** 🚀
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Desenvolvido por: - *Diego Rodrigues do Nascimento*
+- Linkedin - https://www.linkedin.com/in/diegorodriguesdonascimento99-ti/
 
 ## License
 
